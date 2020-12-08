@@ -1,0 +1,10 @@
+livre num {{indice}}: {{liv.title}} - Date Edition: {{liv.date| date }}
+<img [src]="liv.cover" alt="">
+<span *ngIf="liv.reduction >0,else nonreduction" >
+  <button type="button" class="btn btn-success">Prix Finale</button>
+</span>
+<span #nonreduction>
+  <button type="button" class="btn btn-dark">Prix Finale</button>
+</span>
+
+
